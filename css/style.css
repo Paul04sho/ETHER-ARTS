@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* RESET CSS */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img,
+picture,
+svg,
+canvas,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+  }
+
+/* VARIABLES */
+:root {
+
+    --color-bg-main: #0F172A;
+    --color-bg-section: #1A1D24;
+    --color-bg-card: #1F2937;
+    --color-bg-input: #111827;
+  
+    --color-btn-primary: #34C759;
+    --color-btn-primary-hover: #248A3D;
+  
+    --color-text-main: #F9FAFB;
+    --color-text-secondary: #E5E7EB;
+    --color-text-muted: #6B7280;
+  
+    --color-border: #334155;
+  
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+  
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-full: 99px;
+  
+    --shadow-soft: 0 8px 24px rgba(0,0,0,0.25);
+  }
+
+/* ===== HERO SECTION ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("../assets/images/hero.jpg") center/cover no-repeat;
+    color: var(--color-text-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* rajout d'un overlay pour rendre le texte lisible */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+/* HEADER */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 32px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-text-muted);
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icons a {
+    background: white;
+    color: black;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+/* HERO CONTENT */
+.hero-content {
+   position: relative;
+   z-index: 2;
+   max-width: 900px;
+   margin: 0 auto;
+   text-align: center;
+   padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.hero content p {
+    margin-top: 24px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+}
+
+/* BUTTON */
+.btn-primary {
+    margin-top: 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-btn-primary);
+    padding: 16px 32px;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--color-btn-primary-hover);
+    transform: translateY(-3px);
+}
