@@ -195,4 +195,3 @@ Tu peux ajouter des icônes dans les champs :
 9. JS slider
 
 ---
-# ETHER-ARTS
