@@ -77,7 +77,7 @@ Dans le `<head>` de ton `index.html` :
       <div class="socials">
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-x-twitter"></i>
+        {<i class="fa-brands fa-x-twitter"></i>}
       </div>
     </div>
   </div>
