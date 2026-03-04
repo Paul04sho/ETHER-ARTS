@@ -273,19 +273,22 @@ body {
 
 /* main slider wrapper */
 .team-slider {
-    /*border: 3px solid red;*/
+    /*border: 3px solid green;*/
     position: relative;
-    max-width: 1300px;
+    max-width: 1020px;
     margin: 60px auto 0 auto;
     padding: var(--space-lg);
+    overflow: hidden;
 }
 
 /* cards-wrapper */
 .slider-wrapper {
+    /*border: 2px solid red;*/
     display: flex;
-    justify-content: center;
     gap: 40px;
     margin-bottom: 60px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
 }
 
 /* arrows */
@@ -301,7 +304,19 @@ body {
     color: #E5E7EB;
     cursor: pointer;
     transition: 0.3s; 
-   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.arrow:hover:not(:disabled) {
+    background: #2A3442;
+}
+
+.arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .arrow:hover {
@@ -309,11 +324,11 @@ body {
 }
 
 .arrow.left{
-    left: -50px;
+    left: 0;
 }
 
 .arrow.right {
-    right: -50px;
+    right: 0;
 }
 
 /* cards */
@@ -326,8 +341,10 @@ body {
     align-items: center;
     padding: 40px 30px;
     width: 300px;
+    min-width: 300px;
     border-radius: 16px;
     transition: 0.3s ease;
+    flex-shrink: 0;
 }
 
 .card-item:hover {
@@ -341,6 +358,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
+    transition: 0.3s ease;
 }
 
 .card-item h3 {
@@ -371,10 +389,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .socials a:hover{
-    transform: scale(1.1);
+    transform: scale(1.15) rotate(5deg);
 }
 
 
