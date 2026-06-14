@@ -1,3 +1,19 @@
+// ===== HAMBURGER MENU =====
+const menuBtn = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav");
+
+
+menuBtn.innerHTML = menuBtn.classList.contains("active")
+    ? '<i class="fa-solid fa-xmark"></i>'
+    : '<i class="fa-solid fa-bars"></i>';
+
+menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    menuBtn.classList.toggle("active");
+});
+
+
+
 //  ===== TEAM SLIDER =====
 const slider = document.querySelector(".slider-wrapper");
 const slides = document.querySelectorAll(".card-item");
