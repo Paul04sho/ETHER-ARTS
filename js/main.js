@@ -19,12 +19,19 @@ const slider = document.querySelector(".slider-wrapper");
 const slides = document.querySelectorAll(".card-item");
 const prevButton = document.querySelector(".arrow.left");
 const nextButton = document.querySelector(".arrow.right");
+const mediaQuery = window.matchMedia('(max-width: 767px)');
 
 // Slider config 
 const config = {
     cardsToShow: 3,
     gap: 40,
-    currentSlide: 0
+    currentSlide: 0,
+    breakpoints : {
+        768 : {
+            cardsToShow: 1,
+            gap: 10
+        }
+    }
 };
 
 function getMaxIndex() {
@@ -57,6 +64,24 @@ function slidePrev() {
     }
     updateSlider();
 }
+
+function handleMobileSlider(e) {
+    if (e.matches) {
+      slider.classList.add('mobile-single-card');
+    } else {
+      slider.classList.remove('mobile-single-card');
+    }
+    
+  }
+  
+  mediaQuery.addListener(handleMobileSlider);
+  handleMobileSlider(mediaQuery); // Initial check
+
+  function currentSlideCorrection() {
+    if (config.currentSlide > getMaxIndex()) {
+        config.currentSlide = getMaxIndex();
+    }
+  }
 
 // Event listeners
 nextButton.addEventListener("click", slideNext);

@@ -368,6 +368,10 @@ body {
     flex-shrink: 0;
 }
 
+.mobile-single-card .card-item {
+    flex: 0 0 100%;
+}
+
 .card-item:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-soft);
@@ -660,6 +664,34 @@ label {
     .hero-content p {
         font-size: 16px;
     }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .text-wrapper p {
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about-cta {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .form-container {
+        max-width: 500px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-socials{
+       flex-direction: column;
+    }
+    
 }
 
 
