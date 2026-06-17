@@ -19,7 +19,7 @@ const slider = document.querySelector(".slider-wrapper");
 const slides = document.querySelectorAll(".card-item");
 const prevButton = document.querySelector(".arrow.left");
 const nextButton = document.querySelector(".arrow.right");
-const mediaQuery = window.matchMedia('(max-width: 767px)');
+const mediaQuery = window.matchMedia('(max-width: 768px)');
 
 // Slider config 
 const config = {
@@ -68,10 +68,15 @@ function slidePrev() {
 function handleMobileSlider(e) {
     if (e.matches) {
       slider.classList.add('mobile-single-card');
+      config.cardsToShow = 1;
+      config.gap = 10;
     } else {
       slider.classList.remove('mobile-single-card');
+      config.cardsToShow = 3;
+      config.gap = 40;
     }
-    
+    currentSlideCorrection();
+    updateSlider();
   }
   
   mediaQuery.addListener(handleMobileSlider);

@@ -653,8 +653,18 @@ label {
         display: flex;
     }
 
-    .social-icons {
+    .hero .social-icons {
         display: none;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .social-icons a {
+        padding: 10px;
+        width: 20px;
+        height: 20px;
     }
 
     .hero-content h1 {
@@ -665,8 +675,16 @@ label {
         font-size: 16px;
     }
 
+    .about {
+        padding: 60px 24px;
+    }
+
     .section-title {
-        font-size: 32px;
+        font-size: 28px;
+    }
+
+    .about-container {
+        flex-direction: column;
     }
 
     .text-wrapper p {
@@ -680,16 +698,40 @@ label {
         margin: 0 auto;
     }
 
+    .team {
+        padding: 60px 20px;
+    }
+
+    .team-slider {
+        padding: var(--space-lg) 60px;
+    }
+
+    .slider-wrapper {
+        gap: 10px;
+    }
+
+    .mobile-single-card .card-item {
+        flex: 0 0 calc(100vw - 40px - 120px);
+        width: calc(100vw - 40px - 120px);
+        min-width: unset;
+    }
+
     .form-container {
-        max-width: 500px;
+       padding: 40px 24px;
+       max-width: 100%;
+    }
+
+    .footer {
+        padding: 48px 24px 32px;
     }
 
     .footer-container {
         flex-direction: column;
+        gap: 40px;
     }
 
-    .footer-socials{
-       flex-direction: column;
+    .footer-contact {
+        max-width: 100%;
     }
     
 }
