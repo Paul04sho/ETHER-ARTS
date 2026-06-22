@@ -196,4 +196,6 @@ Tu peux ajouter des icônes dans les champs :
 
 ---
 
- background:#111827;
+EmailJS Service ID: service_e4lc7uv
+Template ID: template_nip0sb9
+Public Key: ix7F6xpWFl6K89YCK

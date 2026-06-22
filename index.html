@@ -33,6 +33,20 @@
     </div>
     
     <div class="sidebar-overlay"></div>
+
+    <div class="success-popup-overlay">
+        <div class="success-popup">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2>Message envoyé !</h2>
+            <p>
+                Votre message a bien été transmis à notre service.
+                Nous l'étudierons dans les plus brefs délais.
+            </p>
+            <button class="popup-close-btn">Fermer</button>
+        </div>
+    </div>
+
+    <div class="success-popup-overlay"></div>
     <!-- ACCUEIL -->
     <section class="hero" id="hero">
         <header class="header">
@@ -111,7 +125,7 @@
         </div>
     </section>
 
-    <!-- OUR TEAM -->
+    <!--NOTRE EQUIPE -->
     <section class="team" id="team">
         <h2 class="section-title">Notre équipe</h2>
 
@@ -291,7 +305,9 @@
             </p>
     </footer>
 
-
+<!-- Lien EmailJS-->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("ix7F6xpWFl6K89YCK");</script>
 <script src="js/main.js"></script>    
 </body>
 </html>
