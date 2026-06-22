@@ -1,4 +1,4 @@
-// ===== HAMBURGER MENU =====
+// ===== MENU MOBILE =====
 const menuBtn = document.querySelector(".menu-toggle");
 const nav = document.querySelector(".nav");
 const sidebar = document.querySelector(".sidebar");
@@ -24,11 +24,55 @@ menuBtn.addEventListener("click", () => {
 
 overlay.addEventListener("click", closeSidebar)
 
+//  ===== POPUP DE SUCCES =====
+const popupOverlay = document.querySelector(".success-popup-overlay");
+const popupCloseBtn = document.querySelector(".popup-close-btn");
+
+function openPopup() {
+    popupOverlay.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function closePopup() {
+    popupOverlay.classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+// ferme le popup en cliquant sur le fond de la page
+popupOverlay.addEventListener("click", (e) => {
+    if (e.target === popupOverlay) closePopup();
+});
+
+// ferme via le bouton "Fermer"
+popupCloseBtn.addEventListener("click", closePopup)
+
+//  ===== FORMULAIRE NOUS CONTACTER =====
+const form = document.querySelector(".form-container");
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const selectEl = document.getElementById("mailObject");
+    const mailObjectText = selectEl.options[selectEl.selectedIndex].text;
+
+    emailjs.send("service_e4lc7uv", "template_nip0sb9", {
+       name: document.getElementById("userName").value,
+       email: document.getElementById("userMail").value,
+       mailObject: mailObjectText,
+       userMessage: document.getElementById("userMessage").value
+    })
+    .then(() => {
+        openPopup();
+        form.reset();
+    })
+    .catch((error) => {
+        console.error("Erreur EmailJS:", error);
+        alert("Une erreur est survenue, réessaie.");
+    });
+});
 
 
-
-
-//  ===== TEAM SLIDER =====
+//  ===== SLIDER D'IMAGES =====
 const slider = document.querySelector(".slider-wrapper");
 const slides = document.querySelectorAll(".card-item");
 const prevButton = document.querySelector(".arrow.left");
@@ -36,7 +80,7 @@ const nextButton = document.querySelector(".arrow.right");
 const mobileQuery = window.matchMedia('(max-width: 768px)');
 const tabletQuery = window.matchMedia('(max-width: 1024px)')
 
-// Slider config 
+// Configuration du slider
 const config = {
     cardsToShow: 3,
     gap: 40,
@@ -47,7 +91,7 @@ function getMaxIndex() {
     return slides.length - config.cardsToShow;
 }
 
-// Calculates and applies the CSS transformation to the slider.
+// Fonction pour appliquer les styles CSS au slider
 function applySliderConfig() {
     slider.classList.remove("single-card-mode");
     slider.classList.remove("two-cards-mode");
@@ -85,7 +129,7 @@ function currentSlideCorrection() {
     }
   }
 
-// Show next slides
+// Affiche la prochaine slide
 function slideNext() {
     if (config.currentSlide < getMaxIndex()) {
         config.currentSlide++;
@@ -95,7 +139,7 @@ function slideNext() {
     updateSlider();
 }
 
-// Show previous styles
+// Affiche la slide précédente
 function slidePrev() {
     if (config.currentSlide > 0) {
         config.currentSlide--;
@@ -108,12 +152,12 @@ function slidePrev() {
   mobileQuery.addEventListener("change", applySliderConfig);
   tabletQuery.addEventListener("change", applySliderConfig);
 
-// Event listeners
+// Ecouteurs d'évènements
 nextButton.addEventListener("click", slideNext);
 prevButton.addEventListener("click", slidePrev);
 
-// Resize window
+// Redimensionne la fenêtre
 window.addEventListener("resize", updateSlider);
 
-//Init slider
+// Initialise le slider 
 applySliderConfig();
