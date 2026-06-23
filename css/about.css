@@ -1,0 +1,71 @@
+
+.header {
+    background: #0F1115;
+    border-bottom: 2px solid #2A3442;
+}
+
+.nav-links {
+    color: #FFFFFF;
+}
+
+/* ===== NOTRE HISTOIRE ===== */
+.our-story {
+    background: #171717;
+    padding: 160px 120px;
+}
+
+.our-story .section-title {
+    margin-bottom: 72px;
+}
+
+.our-story-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.our-story-text {
+    flex: 1;
+    max-width: 568px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.our-story p {
+    font-size: 18px;
+    color: #F5F5F4;
+    line-height: 1.85;
+}
+
+.our-story img {
+    width: 460px;
+    height: 580px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-soft);
+}
+
+/* ===== MISSION & VALEURS===== */
+.Mission_and_Values {
+    padding: 90px 60px;
+    background: #1C1C1C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container {
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.image-container img {
+    width: 580px;
+    height: 600px;
+    object-fit: cover;
+}
