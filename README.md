@@ -199,3 +199,29 @@ Tu peux ajouter des icônes dans les champs :
 EmailJS Service ID: service_e4lc7uv
 Template ID: template_nip0sb9
 Public Key: ix7F6xpWFl6K89YCK
+
+Étape 1 — Corriger le border-radius de l'image
+
+Le border-radius ne s'applique pas car l'image déborde de son conteneur. Il faut envelopper l'image dans un <div> et mettre overflow: hidden + border-radius sur ce div, pas sur l'image elle-même.
+
+Étape 2 — Structurer le HTML de la section
+
+La section se compose de 3 blocs côte à côte :
+
+Un div "Notre mission" (texte)
+Un div central avec l'image
+Un div "Nos piliers" (liste de valeurs)
+
+Pour les piliers, utilise une liste <ul> avec 3 <li>, chacun contenant un titre avec l'emoji et un <p> de description dessous.
+
+Étape 3 — Mettre en page les 3 blocs
+
+Un display: flex + align-items: center sur le container principal. Les deux blocs texte ont une largeur fixe identique, l'image prend le reste au centre. Les deux cartes texte (mission et piliers) ont un background légèrement plus clair que le fond de section, un border-radius et un padding.
+
+Étape 4 — Styler "Notre mission"
+
+Titre en font-weight: 700, paragraphe avec line-height aéré et couleur légèrement atténuée (#D1D5DB comme dans .our-story-text).
+
+Étape 5 — Styler "Nos piliers"
+
+Chaque <li> a un margin-bottom entre les items. Le titre de chaque pilier est grand (font-size: 22-24px) avec l'emoji juste après le texte, et la description en dessous est petite et atténuée. La puce • vient du list-style natif ou d'un ::before en CSS.
