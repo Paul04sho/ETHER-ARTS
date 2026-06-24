@@ -1,0 +1,116 @@
+/* ===== SECTION HERO ===== */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("../assets/images/hero.jpg") center/cover no-repeat;
+    color: var(--color-text-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* rajout d'un overlay pour rendre le texte lisible */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+/* contenu de la hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+ }
+ 
+.hero-content h1 {
+     font-size: 40px;
+     font-weight: 800;
+     line-height: 1.1;
+ }
+ 
+.hero-content p {
+     margin-top: 24px;
+     font-size: 18px;
+     line-height: 1.6;
+     color: var(--color-text-secondary);
+ }
+
+/* ===== SECTION A PROPOS ===== */
+.about {
+    background: #111318;
+    padding: 80px 60px;
+    color: #F1F5F9;
+}
+
+/* style des titres */
+.section-title {
+   font-size: 34px;
+   text-align: center;
+   font-weight: 700;
+   margin-bottom: 50px;
+   color: var(--color-text-main);
+   letter-spacing: 1px;
+}
+
+/* conteneur principal de la section A propos */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* conteneur du texte */
+.text-wrapper {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.text-wrapper p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #E5E7EB;
+}
+
+/* conteneur de l'image  */
+.image-wrapper {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-wrapper img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 18px;
+    box-shadow: var(--shadow-soft);
+}
+
+/* ===== SECTION NOTRE EQUIPE ===== */
+.team {
+    background: #1A1D24;
+    padding: 90px 60px;
+    text-align: center;
+}
+
+/* ===== SECTION CONTACT ===== */
+.contact {
+    padding: 80px 20px;
+    background: radial-gradient(circle at top, #0F172A, #0B0F14);;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <!-- Lien CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <div class="sidebar">
         <ul class="nav-links">
             <li><a href="#hero">Accueil</a></li>
-            <li><a href="#about">A propos</a></li>
+            <li><a href="/frontend/pages/about.html">A propos</a></li>
             <li><a href="#artwork">Oeuvres</a></li>
             <li><a href="#team">Notre équipe</a></li>
             <li><a href="#join_us">Rejoindre Ether Arts</a></li>
@@ -51,13 +51,13 @@
     <section class="hero" id="hero">
         <header class="header">
             <div class="logo">
-                <img src="assets/logo/LOGO ETHER ARTS.png" alt="ETHER ARTS logo">
+                <img src="../assets/logo/LOGO ETHER ARTS.png" alt="ETHER ARTS logo">
             </div>
 
             <nav class="nav">
                 <ul class="nav-links">
                     <li><a href="#hero">Accueil</a></li>
-                    <li><a href="about.html">A propos</a></li>
+                    <li><a href="/frontend/pages/about.html">A propos</a></li>
                     <li><a href="#artwork">Oeuvres</a></li>
                     <li><a href="#team">Notre équipe</a></li>
                     <li><a href="#join_us">Rejoindre Ether Arts</a></li>
@@ -120,7 +120,7 @@
             </div>
 
             <div class="image-wrapper">
-                <img src="assets/images/US RAPPERS.jpg" alt="Collectif Ether Arts">
+                <img src="../assets/images/US RAPPERS.jpg" alt="Collectif Ether Arts">
             </div>
         </div>
     </section>
@@ -137,7 +137,7 @@
 
             <div class="slider-wrapper">
                 <div class="card-item">
-                    <img src="assets/images/PFP BLACK_BOY.jpg" alt="KEVIN YAO">
+                    <img src="../assets/images/PFP BLACK_BOY.jpg" alt="KEVIN YAO">
                     <h3>KEVIN "K-RAW" YAO</h3>
                     <p>Directeur artistique & Rappeur</p>
                     <div class="socials">
@@ -148,7 +148,7 @@
                 </div>
 
                 <div class="card-item">
-                    <img src="assets/images/PFP BLACK_GIRL.jpg" alt="MARIAM KONE">
+                    <img src="../assets/images/PFP BLACK_GIRL.jpg" alt="MARIAM KONE">
                     <h3>MARIAM KONE</h3>
                     <p>Illustratrice & Designer graphique</p>
                     <div class="socials">
@@ -159,7 +159,7 @@
                 </div>
 
                 <div class="card-item">
-                    <img src="assets/images/PFP BLACK_BOY_2.jpg" alt="ISMAEL TRAORE">
+                    <img src="../assets/images/PFP BLACK_BOY_2.jpg" alt="ISMAEL TRAORE">
                     <h3>ISMAEL TRAORE</h3>
                     <p>Beatmaker & Producteur musical</p>
                     <div class="socials">
@@ -170,7 +170,7 @@
                 </div>
 
                 <div class="card-item">
-                    <img src="assets/images/PFP BLACK_BOY_3.jpg" alt="JEAN-JULES KOUASSI">
+                    <img src="../assets/images/PFP BLACK_BOY_3.jpg" alt="JEAN-JULES KOUASSI">
                     <h3>JEAN-JULES KOUASSI</h3>
                     <p>Photographe/Vidéographe</p>
                     <div class="socials">
@@ -181,7 +181,7 @@
                 </div>
 
                 <div class="card-item">
-                    <img src="assets/images/PFP BLACK_GIRL_2.jpg" alt="SITA OUATTARA">
+                    <img src="../assets/images/PFP BLACK_GIRL_2.jpg" alt="SITA OUATTARA">
                     <h3>SITA OUATTARA</h3>
                     <p>Dessinatrice</p>
                     <div class="socials">
@@ -192,7 +192,7 @@
                 </div>
 
                 <div class="card-item">
-                    <img src="assets/images/PFP BLACK_BOY_4.jpg" alt="MELVYN KONAN">
+                    <img src="../assets/images/PFP BLACK_BOY_4.jpg" alt="MELVYN KONAN">
                     <h3>MELVYN KONAN</h3>
                     <p>Community manager & Rappeur</p>
                     <div class="socials">
@@ -261,7 +261,7 @@
     <footer class="footer">
             <div class="footer-container">
                 <div class="footer-brand">
-                    <img src="assets/logo/LOGO ETHER ARTS.png" class="footer-logo" alt="ETHER ARTS logo">
+                    <img src="../assets/logo/LOGO ETHER ARTS.png" class="footer-logo" alt="ETHER ARTS logo">
                     <p>
                          Ether Arts rassemble 
                          les talents créatifs ivoiriens 
@@ -308,6 +308,7 @@
 <!-- Lien EmailJS-->
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>emailjs.init("ix7F6xpWFl6K89YCK");</script>
-<script src="js/main.js"></script>    
+<!-- Lien JS -->
+<script type="module" src="/js/main.js"></script>  
 </body>
 </html>
