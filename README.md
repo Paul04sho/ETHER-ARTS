@@ -1,227 +1,255 @@
+# 🎨 Ether Arts
 
-# 📘 README – ETHER ARTS Website (Version avec Font Awesome)
+**Ether Arts** est une plateforme web dédiée à la promotion des talents artistiques ivoiriens.
 
----
+Le projet a pour ambition de rassembler au sein d'un même espace numérique des créateurs issus de différents univers artistiques : musique, rap, slam, poésie, littérature, dessin, peinture, photographie, vidéographie et bien d'autres formes d'expression culturelle.
 
-# 🧱 1️⃣ Structure du projet
-
-```plaintext
-ether-arts/
-│
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-└── assets/
-    └── images/
-```
+L'objectif est de créer une communauté capable de collaborer, partager des œuvres et offrir davantage de visibilité aux artistes émergents.
 
 ---
 
-# 🔌 2️⃣ Ajouter Font Awesome
+## 🌍 Vision
 
-Dans le `<head>` de ton `index.html` :
+Ether Arts souhaite devenir une référence dans la mise en valeur de la jeunesse créative ivoirienne.
 
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-```
+À travers cette plateforme, nous voulons :
 
-Ça te permet d’utiliser :
-
-* flèches slider
-* réseaux sociaux
-* icônes formulaire
-* icône menu burger plus tard
+- Encourager la création artistique locale.
+- Favoriser les collaborations entre artistes.
+- Mettre en lumière des talents encore peu connus.
+- Construire une communauté créative forte et solidaire.
+- Offrir un espace numérique moderne pour exposer des œuvres.
 
 ---
 
-# 🏗 3️⃣ Structure HTML globale
+## 🎯 Fonctionnalités
 
-```html
-<body>
-  <header></header>
+### 🏠 Page d'accueil
 
-  <main>
-    <section id="hero"></section>
-    <section id="about"></section>
-    <section id="team"></section>
-    <section id="contact"></section>
-  </main>
+- Hero section immersive
+- Présentation du collectif
+- Galerie d'œuvres
+- Slider de présentation de l'équipe
+- Formulaire de contact
+- Footer complet
 
-  <footer></footer>
+### 📖 Page À propos
 
-  <script src="js/main.js"></script>
-</body>
-```
+- Histoire du collectif
+- Mission d'Ether Arts
+- Valeurs fondamentales
+- Présentation détaillée du projet
 
----
+### 🤝 Page Rejoindre Ether Arts
 
-# 🎯 4️⃣ Section Our Team (avec Font Awesome)
+Formulaire d'inscription multi-étapes permettant aux artistes de :
 
-### Structure :
-
-```html
-<div class="slider-wrapper">
-
-  <button class="arrow left">
-    <i class="fa-solid fa-chevron-left"></i>
-  </button>
-
-  <div class="slider">
-    <div class="card">
-      <img src="assets/images/member.jpg" alt="">
-      <h3>Nom</h3>
-      <p>Rôle</p>
-
-      <div class="socials">
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook"></i>
-        {<i class="fa-brands fa-x-twitter"></i>}
-      </div>
-    </div>
-  </div>
-
-  <button class="arrow right">
-    <i class="fa-solid fa-chevron-right"></i>
-  </button>
-
-</div>
-```
+- Fournir leurs informations personnelles
+- Présenter leur discipline artistique
+- Décrire leur parcours
+- Soumettre leurs réseaux sociaux
+- Partager leurs réalisations ou leur portfolio
 
 ---
 
-### CSS flèches
+## 🎨 Direction artistique
 
-```css
-.arrow {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
+Le design du projet repose sur une identité moderne, minimaliste et immersive inspirée de l'univers artistique contemporain.
 
-.arrow i {
-  font-size: 20px;
-  color: var(--color-text-secondary);
-}
-```
-
----
-
-# 📩 5️⃣ Section Contact (avec icônes)
-
-Tu peux ajouter des icônes dans les champs :
-
-```html
-<div class="input-group">
-  <i class="fa-solid fa-user"></i>
-  <input type="text" placeholder="Nom">
-</div>
-```
-
----
-
-### CSS Input avec icône
-
-```css
-.input-group {
-  position: relative;
-}
-
-.input-group i {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--color-text-muted);
-}
-
-.input-group input {
-  padding-left: 48px;
-}
-```
-
----
-
-# 🎨 6️⃣ Variables CSS (Design System)
+### Couleurs principales
 
 ```css
 :root {
-
   --color-bg-main: #0F172A;
   --color-bg-section: #1A1D24;
   --color-bg-card: #1F2937;
   --color-bg-input: #111827;
 
-  --color-primary: #2563EB;
-  --color-primary-hover: #1D4ED8;
+  --color-btn-primary: #34C759;
+  --color-btn-primary-hover: #248A3D;
 
   --color-text-main: #F9FAFB;
   --color-text-secondary: #E5E7EB;
   --color-text-muted: #6B7280;
 
   --color-border: #334155;
-
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 32px;
-  --space-xl: 48px;
-
-  --radius-md: 16px;
-  --radius-lg: 24px;
-
-  --shadow-soft: 0 8px 24px rgba(0,0,0,0.25);
 }
+```
+
+### Typographie
+
+**Montserrat**
+
+Utilisée pour :
+
+- Titres
+- Sous-titres
+- Paragraphes
+- Boutons
+- Formulaires
+
+---
+
+## 🛠️ Technologies utilisées
+
+### Front-End
+
+- HTML5
+- CSS3
+- JavaScript (Vanilla JS)
+
+### Outils
+
+- Figma
+- Git
+- GitHub
+- Font Awesome
+
+---
+
+## 📂 Structure du projet
+
+```bash
+ETHER-ARTS/
+│
+├── index.html
+├── about.html
+├── join.html
+│
+├── css/
+│   ├── style.css
+│   ├── about.css
+│   └── join.css
+│
+├── js/
+│   ├── main.js
+│   ├── slider.js
+│   └── menu.js
+│
+├── assets/
+│   ├── images/
+│   ├── logo/
+│   └── icons/
+│
+└── README.md
 ```
 
 ---
 
-# 🚀 7️⃣ Ordre de développement recommandé
+## 📱 Responsive Design
 
-1. HTML complet
-2. Ajouter Font Awesome
-3. Variables CSS
-4. Layout global
-5. Hero
-6. Team (cartes + flèches)
-7. Contact
-8. Responsive
-9. JS slider
+Le site a été conçu selon une approche **Mobile First améliorée** avec plusieurs points de rupture :
+
+```css
+1024px
+768px
+576px
+480px
+```
+
+Adaptations prévues :
+
+- Navigation hamburger sur mobile
+- Sidebar responsive
+- Slider adaptatif (3, 2 ou 1 carte visible)
+- Réorganisation automatique des sections
+- Formulaires optimisés pour smartphone
+- Footer responsive
 
 ---
 
-EmailJS Service ID: service_e4lc7uv
-Template ID: template_nip0sb9
-Public Key: ix7F6xpWFl6K89YCK
+## 🚀 Installation
 
-Étape 1 — Corriger le border-radius de l'image
+Cloner le dépôt :
 
-Le border-radius ne s'applique pas car l'image déborde de son conteneur. Il faut envelopper l'image dans un <div> et mettre overflow: hidden + border-radius sur ce div, pas sur l'image elle-même.
+```bash
+git clone https://github.com/votre-utilisateur/ether-arts.git
+```
 
-Étape 2 — Structurer le HTML de la section
+Accéder au dossier :
 
-La section se compose de 3 blocs côte à côte :
+```bash
+cd ether-arts
+```
 
-Un div "Notre mission" (texte)
-Un div central avec l'image
-Un div "Nos piliers" (liste de valeurs)
+Lancer le projet :
 
-Pour les piliers, utilise une liste <ul> avec 3 <li>, chacun contenant un titre avec l'emoji et un <p> de description dessous.
+```bash
+Ouvrir index.html dans votre navigateur
+```
 
-Étape 3 — Mettre en page les 3 blocs
+---
 
-Un display: flex + align-items: center sur le container principal. Les deux blocs texte ont une largeur fixe identique, l'image prend le reste au centre. Les deux cartes texte (mission et piliers) ont un background légèrement plus clair que le fond de section, un border-radius et un padding.
+## 🤝 Contribuer
 
-Étape 4 — Styler "Notre mission"
+Les contributions sont les bienvenues.
 
-Titre en font-weight: 700, paragraphe avec line-height aéré et couleur légèrement atténuée (#D1D5DB comme dans .our-story-text).
+### Étapes
 
-Étape 5 — Styler "Nos piliers"
+1. Fork le projet
 
-Chaque <li> a un margin-bottom entre les items. Le titre de chaque pilier est grand (font-size: 22-24px) avec l'emoji juste après le texte, et la description en dessous est petite et atténuée. La puce • vient du list-style natif ou d'un ::before en CSS.
+2. Crée une branche :
+
+```bash
+git checkout -b feature/ma-fonctionnalite
+```
+
+3. Commit tes modifications :
+
+```bash
+git commit -m "Ajout d'une nouvelle fonctionnalité"
+```
+
+4. Push vers GitHub :
+
+```bash
+git push origin feature/ma-fonctionnalite
+```
+
+5. Ouvre une Pull Request
+
+---
+
+## 📌 État du projet
+
+### ✅ Terminé
+
+- Design Figma de la page d'accueil
+- Intégration HTML/CSS
+- Slider équipe en JavaScript
+- Footer
+- Responsive Design
+- Page À propos
+
+### 🚧 En cours
+
+- Formulaire d'inscription multi-étapes
+- Page Rejoindre Ether Arts
+- Galerie des œuvres
+
+### 🔮 À venir
+
+- Base de données
+- Gestion des profils artistes
+- Upload d'œuvres
+- Tableau de bord administrateur
+- Système de candidature
+- Espace membre
+
+---
+
+## 🇨🇮 À propos
+
+Ether Arts est né de la volonté de jeunes créatifs ivoiriens de construire un espace où les artistes peuvent grandir ensemble, collaborer sur des projets et partager leurs œuvres avec un public plus large.
+
+Le collectif rassemble des profils variés : rappeurs, slameurs, poètes, écrivains, peintres, dessinateurs, photographes et vidéastes.
+
+Notre ambition est simple : créer un écosystème où la créativité ivoirienne peut s'exprimer librement, être valorisée et inspirer la prochaine génération d'artistes.
+
+---
+
+## ✨ Devise
+
+> **Créer. Collaborer. Inspirer.**
+>
+> **ETHER ARTS — Là où les talents se rencontrent.**
