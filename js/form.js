@@ -2,7 +2,6 @@
 export function initForm() {
     const popupOverlay  = document.querySelector(".success-popup-overlay");
     const popupCloseBtn = document.querySelector(".popup-close-btn");
-    const form          = document.querySelector(".form-container");
  
     function openPopup() {
         popupOverlay.classList.add("active");
@@ -23,6 +22,8 @@ export function initForm() {
     popupCloseBtn.addEventListener("click", closePopup);
  
     //  ===== FORMULAIRE NOUS CONTACTER =====
+    const form = document.querySelector(".form-container")
+
     form.addEventListener("submit", (e) => {
         e.preventDefault();
  
