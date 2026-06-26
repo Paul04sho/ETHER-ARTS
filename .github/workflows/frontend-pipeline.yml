@@ -1,57 +1,69 @@
-name: Optimize Frontend Assets
+name: Deploy Ether Arts to GitHub Pages
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch: # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Permissions obligatoires pour que deploy-pages puisse écrire sur GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-optimize:
+
+  # ─── Job 1 : Validation et préparation de l'artifact ───────────────────────
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Download the repository files onto the GitHub runner
+      # Étape 1 : Télécharge le repo sur le runner
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Step 2: Minify CSS and JS files to improve web performance
-      - name: Minify CSS and JS
-        uses: actions/marketplace/actions/minify-css-js-and-html-files-in-github-action@v1.0.0 # Example marketplace tool
-        with:
-          css_src: '/css/main.css'
-          js_src: '/js/main.js'
-
-      # Step 3: Run custom inline JavaScript functionality directly inside the runner
-      - name: Execute Custom JS Script
+      # Étape 2 : Vérifie que les fichiers clés sont bien présents
+      - name: Validate frontend files
         run: |
-          node -e "
-          const fs = require('fs');
-          console.log('Validating files...');
-          if (fs.existsSync('./css/style.css')) {
-            console.log('✅ CSS file exists and is validated.');
-          } else {
-            console.error('❌ CSS file missing!');
-            process.exit(1);
-          }
-          "
+          echo "Validation des fichiers frontend..."
 
-      # Step 4: Commit and push the optimized files back to GitHub automatically
-      - name: Commit Optimized Assets
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git diff --quiet && git diff --staged --quiet || git commit -m "Automated CSS/JS optimization"
-          git push
+          if [ -f "./frontend/css/main.css" ]; then
+            echo "✅ main.css trouvé"
+          else
+            echo "❌ main.css introuvable !"
+            exit 1
+          fi
 
-      - name: Setup GitHub Pages Static Hosting
+          if [ -f "./frontend/js/main.js" ]; then
+            echo "✅ main.js trouvé"
+          else
+            echo "❌ main.js introuvable !"
+            exit 1
+          fi
+
+      # Étape 3 : Prépare GitHub Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Finished Web Artifacts
+      # Étape 4 : Upload uniquement le dossier frontend/
+      # → Pages servira depuis frontend/ comme racine
+      # → Les chemins relatifs ../css/, ../js/, ../assets/ dans les HTML fonctionneront
+      - name: Upload frontend as Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' # Uploads the root directory containing your index.html, css, and js
+          path: './frontend'
 
-      - name: Deploy Live Site
+  # ─── Job 2 : Déploiement (séparé, attend que build soit terminé) ────────────
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
