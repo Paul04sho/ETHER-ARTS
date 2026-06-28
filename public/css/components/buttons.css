@@ -1,0 +1,72 @@
+/* ===== BOUTON WHATSAPP =====*/
+.btn-primary {
+    margin-top: 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-btn-primary);
+    padding: 16px 32px;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--color-btn-primary-hover);
+    transform: translateY(-3px);
+}
+
+/* ===== BOUTON EN SAVOIR PLUS =====*/
+.about-cta {
+    margin-top: 40px;
+    padding: 14px 28px;
+    background: transparent;
+    color: #F1F5F9;
+    border: 2px solid #2E3440;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.about-cta:hover {
+    background: #2A3442;
+    border-color:#3A3f4E;
+    transform: translateY(-2px);
+}
+
+/* ===== BOUTON REJOINDRE L'EQUIPE =====*/
+.team-cta {
+    margin-top: 70px;
+    padding: 14px 32px;
+    background: #222631;
+    color: #F1F5F9;
+    border: 2px solid #2E3440;
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.team-cta:hover {
+    background: #2A3442;
+    transform: translateY(-3px);
+}
+
+/* ===== BOUTON ENVOYER LE MESSAGE =====*/
+.submit-btn {
+    margin-top: 20px;
+    padding: 16px;
+    background: #222631;
+    color: #F1F5F9;
+    border: 2px solid #334155;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #334155;
+    transform: translateY(-2px);
+}

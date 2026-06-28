@@ -1,0 +1,71 @@
+/* ===== SLIDER D'IMAGES =====*/
+.team-slider {
+    position: relative;
+    max-width: 1020px;
+    margin: 60px auto 0 auto;
+    padding: var(--space-lg);
+    overflow: hidden;
+}
+
+/* conteneur des cartes de profil */
+.slider-wrapper {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+/* flèches de navigation */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    background: #1F2937;
+    border: 1px solid #334155;
+    border-radius: 50%;
+    color: #E5E7EB;
+    cursor: pointer;
+    transition: 0.3s; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.arrow:hover:not(:disabled) {
+    background: #2A3442;
+}
+
+.arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.arrow:hover {
+    background: #2A3442;
+}
+
+.arrow.left{
+    left: 0;
+}
+
+.arrow.right {
+    right: 0;
+}
+
+/* Carte de profil unique sur mobile */ 
+.single-card-mode .card-item {
+    flex: 0 0 calc(100vw - 128px);
+    width: calc(100vw - 128px);
+    min-width: unset;
+ }
+
+/* Deux cartes de profil sur tablettes et ordis */
+.two-cards-mode .card-item {
+     flex:  0 0 calc((100vw - 224px) / 2);
+     width: calc((100vw - 224px) / 2);
+     min-width: unset;
+ }

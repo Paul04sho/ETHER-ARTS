@@ -1,0 +1,205 @@
+/* ===== MEDIA QUERIES - pour la responsivité =====*/
+
+/* Cache la sidebar sur ordi */
+@media (min-width: 769px) {
+    .sidebar,
+    .sidebar-overlay {
+        display: none;
+    }
+}
+
+/* Ordinateurs portables et tablettes grand format */
+@media (max-width: 1280px) {
+    .header {
+        padding: 28px 40px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+}
+
+/* Tablettes tactiles format paysage et ordinateurs de bureau */
+@media (max-width: 1024px) {
+    .header {
+        padding: 24px 32px;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .about {
+        padding: 48px;
+    }
+
+    .footer-container {
+        gap: 40px;
+    }
+
+    .footer-brand {
+        max-width: 190px;
+    }
+}
+
+/* Tablettes numériques format portrait et petits ordinateurs portables */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        grid-column: 3;
+        justify-self: end;
+    }
+
+    .hero .social-icons {
+        display: none;
+    }
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .social-icons a {
+        padding: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .about {
+        padding: 60px 24px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .text-wrapper p {
+        font-size: 15px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .about-cta {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .team {
+        padding: 60px 20px;
+    }
+
+    .team-slider {
+        padding: var(--space-lg) 44px;
+    }
+
+    .arrow {
+        width: 40px;
+        height: 40px;
+    }
+
+    .slider-wrapper {
+        gap: 10px;
+    }
+
+    .single-card-mode .card-item {
+        padding: 32px 20px;
+    }
+
+    .single-card-mode .card-item img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .form-container {
+       padding: 40px 24px;
+       max-width: 100%;
+    }
+
+    .footer {
+        padding: 48px 24px 32px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-contact {
+        max-width: 100%;
+    }
+    
+}
+
+/* Smartphones de grande taille ou petites tablettes */
+@media (max-width: 576px) {
+
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .btn-primary {
+        padding: 14px 24px;
+    }
+
+    .form-container {
+        padding: 32px 24px;
+    }
+}
+
+/* Smartphones de petite taille */
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 0 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 22px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .form-container {
+        padding: 28px 16px;
+    }
+
+    .input-field input,
+    .input-field select,
+    .input-field textarea {
+        padding: 12px 18px;
+    }
+
+    .about-cta,
+    .submit-btn {
+        width: 100%;
+    }
+
+}
