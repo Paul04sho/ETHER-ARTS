@@ -1,22 +1,33 @@
-# Environnement de développement local
+# Mise en place de l'environnement de travail
 
 ## 🛠️ Stack technique
-
 - **Back-end :** Laravel 13, PHP 8.3+
 - **Base de données :** MySQL
 - **Environnement local :** Laravel Sail (Docker)
-
----
 
 ## ⚙️ Installation
 
 ### Prérequis
 
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/) installé et démarré
-- [PHP 8.3+](https://www.php.net/downloads.php) installé
-- [Composer](https://getcomposer.org/download/) installé
+### 🐳 Docker
+Docker permet d'empaqueter une application et ses dépendances dans un conteneur isolé, qui peut être exécuté sur n'importe quel serveur. Il ne s'agit pas de virtualisation, mais de conteneurisation, une forme plus légère qui s'appuie sur certaines parties de la machine hôte pour son fonctionnement.
 
----
+|[Windows](https://docs.docker.com/desktop/setup/install/windows-install/)|[Linux](https://docs.docker.com/desktop/setup/install/linux/)|
+|---|---|
+
+### 🐘 PHP 8.3+
+**PHP** (Hypertext Preprocessor) est le langage de programmation principal du projet. C'est un langage dit "back-end" (qui s'exécute côté serveur).
+
+|[Windows](https://grafikart.fr/tutoriels/install-php-windows-1114)|[Linux](https://grafikart.fr/tutoriels/install-php-linux-1153)|
+|---|---|
+
+### Composer
+Composer est un gestionnaire de paquets pour PHP. C'est le chef d'orchestre de notre projet. Tout comme `npm`, `composer` sert à ajouter, supprimer, mettre à jour des dépdendances dans le projet.
+
+|[Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)|[Linux / Mac](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)|
+|---|---|
+
+## ⚙️ Configuration
 
 ### 1. Cloner le dépôt
 
@@ -26,7 +37,7 @@ cd ETHER-ARTS
 ```
 
 ### 2. Installer les dépendances PHP
-
+Dans votre terminal à la racine du projet Laravel.
 ```bash
 composer install
 ```
@@ -53,46 +64,24 @@ DB_DATABASE=ether_arts
 DB_USERNAME=sail
 DB_PASSWORD=password
 ```
+## 🚀 Démarrage
 
-### 4. Démarrer les conteneurs Sail
+### 1. Démarrer les conteneurs Sail
 
 ```bash
 composer sail:up
 ```
 
-### 5. Générer la clé applicative
+### 2. Générer la clé applicative
 
 ```bash
 composer sail:keygen
 ```
 
-### 6. Lancer les migrations
+### 3. Lancer les migrations
 
 ```bash
 composer sail:migrate
 ```
 
-### 7. (Optionnel) Peupler la base de données
-```bash
-composer sail:dbseed
-```
-
----
-
-### ✅ L'application est accessible sur [http://localhost](http://localhost)
-
----
-
-## 🧰 Commandes utiles
-
-| Commande | Description |
-|---|---|
-| `./vendor/bin/sail up -d` | Démarrer les conteneurs en arrière-plan |
-| `./vendor/bin/sail down` | Arrêter les conteneurs |
-| `./vendor/bin/sail artisan migrate` | Lancer les migrations |
-| `./vendor/bin/sail artisan migrate:fresh --seed` | Réinitialiser la BDD et jouer les seeders |
-| `./vendor/bin/sail artisan tinker` | Ouvrir une console interactive Laravel |
-| `./vendor/bin/sail composer <commande>` | Exécuter une commande Composer |
-| `./vendor/bin/sail npm <commande>` | Exécuter une commande npm |
-| `./vendor/bin/sail shell` | Ouvrir un shell dans le conteneur applicatif |
-| `./vendor/bin/sail build --no-cache` | Reconstruire les images Docker |
+### ✅ L'application est accessible sur [http://localhost](http://localhost:80)
