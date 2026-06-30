@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETHER ARTS Website</title>
+
+    <!-- Police d'écriture importée-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Bibliothèque Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- Lien CSS -->
+    <link rel="stylesheet" href="{{ asset("css/app.css") }}">
+</head>
+
+<body>
+    <header class="about-header">
+        <div class="logo">
+            <img src="/assets/logo/LOGO ETHER ARTS.png" alt="ETHER ARTS logo">
+        </div>
+
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="{{ route("index") }}">Accueil</a></li>
+                <li><a href="#about">A propos</a></li>
+                <li><a href="#artwork">Oeuvres</a></li>
+                <li><a href="#team">Notre équipe</a></li>
+                <li><a href="#join_us">Rejoindre Ether Arts</a></li>
+            </ul>
+        </nav>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/ehter_artist?igsh=MXZpOW1kZmdlamw5Ng%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@ether.art2?_r=1&_t=ZN-948Fs7knuuk"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </header>
+
+    <section class="our-story">
+        <h2 class="section-title">Notre histoire</h2>
+        <div class="our-story-container">
+            <div class="our-story-text">
+                <p>
+                    À l'origine, quelques jeunes créatifs passionnés de
+                    musique, de dessin, de littérature et d'arts visuels ont
+                    décidé de se réunir autour d'une même vision : bâtir
+                    une communauté où chaque artiste peut évoluer, apprendre et trouver sa place.
+                </p>
+
+                <p>
+                    Ce qui n'était au départ qu'un groupe d'échanges est
+                    progressivement devenu un collectif porté par l'envie
+                    de créer, de partager des opportunités et de mettre en
+                    lumière les œuvres de jeunes talents souvent méconnus. Au fil des rencontres, des projets et des
+                    collaborations, Ether Arts s'est construit comme un
+                    espace d'expression ouvert à toutes les formes de créativité.
+                </p>
+
+                <p>
+                    Aujourd'hui, le collectif rassemble des artistes aux
+                    univers variés — rappeurs, peintres, dessinateurs,
+                    slameurs, écrivains, photographes et bien d'autres —
+                    unis par la même passion : transformer leurs idées en créations capables d'inspirer, d'émouvoir et
+                    de rassembler.
+                </p>
+
+                <p>
+                    Plus qu'un collectif, Ether Arts est un mouvement créatif
+                    qui célèbre l'art sous toutes ses formes et croit
+                    au potentiel de la nouvelle génération ivoirienne.
+                </p>
+            </div>
+
+            <img src="../assets/images/Our_Story.jpg" alt="Notre histoire - Ether Arts">
+        </div>
+    </section>
+
+    <section class="Mission_and_Values">
+        <div class="our-mission">
+            <h2 class="section-title">Notre mission</h2>
+            <p>
+                Donner aux artistes ivoiriens les moyens de révéler leur potentiel
+                en leur offrant un espace d'expression, de collaboration et de visibilité.
+                A travers Ether Arts, nous souhaitons créer une communauté créative forte
+                où chacun peut apprendre, partager et grandir aux côtés d'autres talents passionés.
+            </p>
+        </div>
+
+        <div class="image-container">
+            <img src="../assets/images/Youngsters_in_the_lab.jpg" alt="Mission & Valeurs - Ether Arts">
+        </div>
+
+        <div class="our-values">
+            <h2 class="section-title">Nos piliers</h2>
+            <ul>
+                <li>
+                    <h3>Créativité 🎨</h3>
+                    <p>Explorer, imaginer, créer.</p>
+                </li>
+
+                <li>
+                    <h3>Collaboration 👤</h3>
+                    <p>Grandir grâce au collectif.</p>
+                </li>
+
+                <li>
+                    <h3> Excellence 🌟 </h3>
+                    <p>Toujours chercher à progresser.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <img src="../assets/logo/LOGO ETHER ARTS.png" class="footer-logo" alt="ETHER ARTS logo">
+                <p>
+                     Ether Arts rassemble 
+                     les talents créatifs ivoiriens 
+                     et leur offre une scène
+                     pour faire rayonner leurs œuvres.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h2 class="footer-title">Navigation</h2>
+                <ul class="nav-links">
+                    <li><a href="#hero">Accueil</a></li>
+                    <li><a href="#about">A propos</a></li>
+                    <li><a href="#artwork">Oeuvres</a></li>
+                    <li><a href="#team">Notre équipe</a></li>
+                    <li><a href="#join_us">Rejoindre Ether Arts</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-socials">
+                <h2 class="footer-title">Suivez-nous</h2>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/ehter_artist?igsh=MXZpOW1kZmdlamw5Ng%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.tiktok.com/@ether.art2?_r=1&_t=ZN-948Fs7knuuk"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <h2 class="footer-title">Abidjan, Côte d'Ivoire</h2>
+                <a href="mailto:paultchoume905@gmail.com">contact@etherarts.ci</a>
+                <a href="tel:+2250565656518">+225 05 65 65 65 18</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <p class="copyright">
+            © 2026 Ether Arts. Tous droits réservés. <br>
+            Conçu avec passion en Côte d'Ivoire.
+        </p>
+</footer>
+
+   
+
+
+    <script type="module" src="{{ asset("js/main.js") }}"></script>    
+</body>

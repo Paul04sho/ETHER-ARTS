@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETHER ARTS Website</title>
+
+    <!-- Police d'écriture importée-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Bibliothèque Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- Lien CSS -->
+    <link rel="stylesheet" href="{{ asset("css/app.css") }}"/>
+</head>
+<body>
+    <div class="sidebar">
+        <ul class="nav-links">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="{{ route("about") }}">A propos</a></li>
+            <li><a href="#artwork">Oeuvres</a></li>
+            <li><a href="#team">Notre équipe</a></li>
+            <li><a href="#join_us">Rejoindre Ether Arts</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/ehter_artist?igsh=MXZpOW1kZmdlamw5Ng%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@ether.art2?_r=1&_t=ZN-948Fs7knuuk"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+    </div>
+    
+    <div class="sidebar-overlay"></div>
+
+    <div class="success-popup-overlay">
+        <div class="success-popup">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2>Message envoyé !</h2>
+            <p>
+                Votre message a bien été transmis à notre service.
+                Nous l'étudierons dans les plus brefs délais.
+            </p>
+            <button class="popup-close-btn">Fermer</button>
+        </div>
+    </div>
+    <!-- ACCUEIL -->
+    <section class="hero" id="hero">
+        <header class="header">
+            <div class="logo">
+                <img src="../assets/logo/LOGO ETHER ARTS.png" alt="ETHER ARTS logo">
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="#hero">Accueil</a></li>
+                    <li><a href="{{ route("about") }}">A propos</a></li>
+                    <li><a href="#artwork">Oeuvres</a></li>
+                    <li><a href="#team">Notre équipe</a></li>
+                    <li><a href="#join_us">Rejoindre Ether Arts</a></li>
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" aria-label="Open the menu">
+                <i id="btnIcon" class="fa fa-bars"></i>
+            </button>            
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com/ehter_artist?igsh=MXZpOW1kZmdlamw5Ng%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.tiktok.com/@ether.art2?_r=1&_t=ZN-948Fs7knuuk"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </header>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>
+                REJOINS LE MOUVEMENT <br>
+                <span>et grandis en tant qu'artiste</span>
+            </h1>
+
+            <p>
+                Ether Arts est un collectif regroupant plusieurs passionés de musique.
+                Il s'étend également à d'autres formes d'expressions comme la peinture ou la littérature.
+                Né de la vision de talents émergeant sur la scène Abidjanaise, il tend à promouvoir le 
+                savoir-faire des jeunes pousses ivoiriennes.
+            </p>
+
+            <a href="https://wa.me/2250565656518?text=Salut%20tout%20le%20monde%20!%20%F0%9F%91%8B%20Je%20suis%20%5BVotre%20Nom%5D%2C%20un(e)%20artiste%20local(e)%20qui%20vient%20de%20d%C3%A9couvrir%20ce%20groupe.%20Je%20cherche%20%C3%A0%20%C3%A9changer%20avec%20d'autres%20cr%C3%A9atifs%2C%20%C3%A0%20avoir%20des%20retours%20et%20%C3%A0%20partager%20mon%20travail.%20Pourriez-vous%20me%20dire%20quelle%20est%20l'ambiance%20ici%20et%20s'il%20y%20a%20des%20r%C3%A8gles%20particuli%C3%A8res%20pour%20le%20partage%20%3F%20Merci%20de%20m'accueillir%20!" 
+            class="btn-primary" 
+            target="_blank">
+                ECRIS NOUS
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- A PROPOS-->
+    <section class="about" id="about">
+        <h2 class="section-title">A propos</h2>
+
+        <div class="about-container">
+            <div class="text-wrapper">
+                <p>
+                    Nous sommes un collectif de jeunes créatifs ivoiriens, unis par la passion
+                    de l'art sous toutes ses formes. Notre mission ? Mettre en lumière les talents locaux
+                    et offrir une scène à ceux qui font vibrer la Côte d'Ivoire à travers la musique, le rap,
+                    la peinture, le dessin, la littérature et bien plus encore. Ici, chaque artiste trouve
+                    un espace pour s'exprimer, partager sa vision et connecter avec une communauté qui valorise
+                    la créativité. Ensemble, nous construisons un réseau vibrant où l'art devient une force,
+                    un pont entre les idées, les émotions et les publics.
+                </p>
+                <button class="about-cta">
+                    En savoir plus
+                </button>
+            </div>
+
+            <div class="image-wrapper">
+                <img src="../assets/images/US RAPPERS.jpg" alt="Collectif Ether Arts">
+            </div>
+        </div>
+    </section>
+
+    <!--NOTRE EQUIPE -->
+    <section class="team" id="team">
+        <h2 class="section-title">Notre équipe</h2>
+
+        <div class="team-slider">
+
+            <button class="arrow left" aria-label="Précédent">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="slider-wrapper">
+                <div class="card-item">
+                    <img src="../assets/images/PFP BLACK_BOY.jpg" alt="KEVIN YAO">
+                    <h3>KEVIN "K-RAW" YAO</h3>
+                    <p>Directeur artistique & Rappeur</p>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="../assets/images/PFP BLACK_GIRL.jpg" alt="MARIAM KONE">
+                    <h3>MARIAM KONE</h3>
+                    <p>Illustratrice & Designer graphique</p>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="../assets/images/PFP BLACK_BOY_2.jpg" alt="ISMAEL TRAORE">
+                    <h3>ISMAEL TRAORE</h3>
+                    <p>Beatmaker & Producteur musical</p>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="../assets/images/PFP BLACK_BOY_3.jpg" alt="JEAN-JULES KOUASSI">
+                    <h3>JEAN-JULES KOUASSI</h3>
+                    <p>Photographe/Vidéographe</p>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="../assets/images/PFP BLACK_GIRL_2.jpg" alt="SITA OUATTARA">
+                    <h3>SITA OUATTARA</h3>
+                    <p>Dessinatrice</p>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="../assets/images/PFP BLACK_BOY_4.jpg" alt="MELVYN KONAN">
+                    <h3>MELVYN KONAN</h3>
+                    <p>Community manager & Rappeur</p>
+                    <div class="socials">
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="arrow right" aria-label="Suivant">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <a 
+        href="https://chat.whatsapp.com/Jj2MRD1MMDbL9u1NhV5kPD?mode=gi_t" 
+        class="team-cta" 
+        target="_blank" 
+        rel="noopener noreferrer">
+            Rejoindre l'équipe
+        </a>
+    </section>
+
+    <!-- NOUS CONTACTER -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <form class="form-container">
+            <div class="input-field">
+                <label for="userName">Nom complet</label>
+                <input type="text" id="userName" placeholder="Entrez votre nom">
+            </div>
+
+            <div class="input-field">
+                <label for="userMail">Adresse e-mail</label>
+                <input type="email" id="userMail" placeholder="Entrez votre email">
+            </div>
+
+            <div class="input-field">
+                <label for="mailObject">Sujet</label>
+                <select id="mailObject">
+                    <option value="">--Choisissez un sujet--</option>
+                    <option value="first-choice">Rejoindre Ether Arts</option>
+                    <option value="second-choice">Proposition de partenariat</option>
+                    <option value="third-choice">Collaboration artistique</option>
+                    <option value="fourth-choice">Demande d'informations</option>
+                    <option value="fifth-choice">Presse & médias</option>
+                    <option value="sixth-choice">Autre</option>
+                </select>
+            </div>
+
+            <div class="input-field">
+                <label for="userMessage">Votre message</label>
+                <textarea id="userMessage" placeholder="Décrivez votre demande ou votre projet..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">
+               Envoyer le message
+            </button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <img src="../assets/logo/LOGO ETHER ARTS.png" class="footer-logo" alt="ETHER ARTS logo">
+                    <p>
+                         Ether Arts rassemble 
+                         les talents créatifs ivoiriens 
+                         et leur offre une scène
+                         pour faire rayonner leurs œuvres.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h2 class="footer-title">Navigation</h2>
+                    <ul class="nav-links">
+                        <li><a href="#hero">Accueil</a></li>
+                        <li><a href="#about">A propos</a></li>
+                        <li><a href="#artwork">Oeuvres</a></li>
+                        <li><a href="#team">Notre équipe</a></li>
+                        <li><a href="#join_us">Rejoindre Ether Arts</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-socials">
+                    <h2 class="footer-title">Suivez-nous</h2>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/ehter_artist?igsh=MXZpOW1kZmdlamw5Ng%3D%3D"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@ether.art2?_r=1&_t=ZN-948Fs7knuuk"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-contact">
+                    <h2 class="footer-title">Abidjan, Côte d'Ivoire</h2>
+                    <a href="mailto:paultchoume905@gmail.com">contact@etherarts.ci</a>
+                    <a href="tel:+2250565656518">+225 05 65 65 65 18</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <p class="copyright">
+                © 2026 Ether Arts. Tous droits réservés. <br>
+                Conçu avec passion en Côte d'Ivoire.
+            </p>
+    </footer>
+
+<!-- Lien EmailJS-->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("ix7F6xpWFl6K89YCK");</script>
+<!-- Lien JS -->
+<script type="module" src="{{ asset("js/main.js") }}"></script>  
+</body>
+</html>

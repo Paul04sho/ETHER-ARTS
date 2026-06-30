@@ -1,0 +1,88 @@
+// 🎨 Ether Arts — Database Schema (DBML)
+
+Table user {
+  id integer [primary key, increment]
+  last_name varchar
+  first_name varchar
+  username varchar [not null]
+  avatar varchar
+  phone varchar [unique, not null]
+  email varchar [unique, not null]
+  role varchar [not null, note: 'admin, creator, fan']
+  bio text
+  password varchar [not null]
+  created_at timestamp
+}
+
+Table artwork {
+  id integer [primary key, increment]
+  title varchar [not null]
+  description text
+  media_type varchar [not null, note: 'audio, video, img, pdf']
+  file_path varchar [not null]
+  published_at timestamp
+  is_published boolean [default: true, note: 'Allows disabling the publication']
+  user_id integer [not null]
+  category_id integer [not null]
+}
+
+Table category {
+  id integer [primary key, increment]
+  label varchar [not null, unique]
+}
+
+Table comment {
+  id integer [primary key, increment]
+  content text [not null]
+  published_at timestamp [default: `now()`]
+  user_id integer [not null]
+  artwork_id integer [not null]
+}
+
+Table like {
+  id integer [primary key, increment]
+  status boolean [default: true, note: 'true = liked, false = unliked']
+  user_id integer [not null]
+  artwork_id integer [not null]
+  
+  Note: 'A user can only like an artwork once'
+  Indexes {
+    (user_id, artwork_id) [unique]
+  }
+}
+
+Table follow {
+  fan_id integer [not null]
+  creator_id integer [not null]
+  created_at timestamp [default: `now()`]
+
+  primary key (fan_id, creator_id)
+}
+
+Table donation {
+  id integer [primary key, increment]
+  amount decimal [not null]
+  currency varchar [default: 'EUR']
+  donated_at timestamp [default: `now()`]
+  sender_id integer [not null, note: 'The fan/user who gives']
+  recipient_id integer [not null, note: 'The creator who receives']
+}
+
+// ----------------------------------------------------
+// 🔗 RELATIONSHIPS & CARDINALITIES
+// ----------------------------------------------------
+
+Ref: artwork.user_id > user.id
+Ref: artwork.category_id > category.id
+
+Ref: comment.user_id > user.id
+Ref: comment.artwork_id > artwork.id
+
+Ref: like.user_id > user.id
+Ref: like.artwork_id > artwork.id
+
+Ref: follow.fan_id > user.id
+Ref: follow.creator_id > user.id
+
+Ref: donation.sender_id > user.id
+Ref: donation.recipient_id > user.id
